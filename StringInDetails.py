@@ -20,14 +20,14 @@ print(stringValue[-1])
 
 # Program to display +ve and -ve index of a character in a string
 
-# input_value = input('Enter a string');
-#
-# positiveIndex = 0;
-# while len(input_value) > positiveIndex:
-#     print('The character present at +ve index : {} is {}'.format(positiveIndex, input_value[positiveIndex]));
-#     print('The character present at -ve index : {} is {}'
-#           .format(positiveIndex-len(input_value), input_value[positiveIndex - len(input_value)]));
-#     positiveIndex = positiveIndex + 1;
+input_value = input('Enter a string');
+
+positiveIndex = 0;
+while len(input_value) > positiveIndex:
+    print('The character present at +ve index : {} is {}'.format(positiveIndex, input_value[positiveIndex]));
+    print('The character present at -ve index : {} is {}'
+          .format(positiveIndex-len(input_value), input_value[positiveIndex - len(input_value)]));
+    positiveIndex = positiveIndex + 1;
 
 
 name = 'Praveen';
@@ -82,19 +82,22 @@ print('typing is so interesting'.rfind('in', 1, 8));
 print('typing is so interesting'.rfind('in', 8, 1));
 
 
-# stringValue = input("enter a string").strip();
-# subString = input("substring to identify").strip();
-#
-# repetitionFlag = stringValue.find(subString);
-# if repetitionFlag == -1:
-#     print('No substring is available');
-# count = 1;
-# while repetitionFlag != -1:
-#     repetitionFlag = stringValue.find(subString, repetitionFlag + len(subString), len(stringValue));
-#     if repetitionFlag != -1:
-#         count = count + 1;
-#
-# print(count);
+stringValue = input("enter a string").strip();
+subString = input("substring to identify").strip();
+
+repetitionFlag = stringValue.find(subString);
+if repetitionFlag == -1:
+    print('No substring is available');
+count = 1;
+while repetitionFlag != -1:
+    repetitionFlag = stringValue.find(subString, repetitionFlag + len(subString), len(stringValue));
+    if repetitionFlag != -1:
+        count = count + 1;
+
+print(count);
+
+if __name__ == '__main__':
+    print('Hello world');
 
 
 

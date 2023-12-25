@@ -197,3 +197,177 @@ class Student(Person):
         print('Student constructor');
         
 student = Student('Ram', 10);
+print(student.__dict__);
+
+
+if __name__ == '__main':
+    print("hello world");
+
+
+class A:
+    pass;
+
+class B(A):
+    pass;
+
+class C(A):
+    pass;
+
+class D(C,B):
+    pass;
+
+# finding method resolution order of a class using mro()
+print(A.mro());
+print(type(A.mro()));
+print(A.__mro__);
+print(type(A.__mro__));
+
+print(f'B class method reosulution : {B.mro()}');
+print(f'B class method reosulution : {B.__mro__}');
+
+
+print(f'C class method reosulution : {C.mro()}');
+print(f'C class method reosulution : {C.__mro__}');
+
+
+print(f'D class method reosulution : {D.mro()}');
+print(f'D class method reosulution : {D.__mro__}');
+
+
+class X:
+    def __init__(self):
+        print('Parent constructor');
+    
+    def m1(self):
+        print('Parent class method');
+
+class Y(X):
+
+    def __init__(self):
+        print('child constructor');
+        super().__init__();
+    
+    def m1(self):
+        print('Child class method');
+        super().m1();
+
+y = Y();
+y.m1();
+
+
+class A:
+    a = 20;
+    def __init__(self, b) -> None:
+        self.b = b;
+
+
+class B(A):
+    def __init__(self, b):
+        super().__init__(b);
+        self.a =60;
+
+    def disp(self):
+        print(self.b);
+        print(self.a);
+        print(super().a);
+    
+
+b = B(30);
+b.disp();
+
+b.b =40;
+b.a =50;
+b.disp();
+
+
+class Book:
+    def __init__(self, pages):
+        self.pages = pages;
+        print('Type ', type(pages));
+    
+
+    # magic method for + operator 
+    def __add__(self, other_book):
+        print('calling magic method');
+        return self.pages + other_book.pages;
+
+    def __str__(self) -> str:
+        return  str(self.pages);
+
+book_one = Book(10);
+book_two = Book(20);
+print(book_one + book_two); 
+
+print(book_one);
+print(book_two);
+
+
+# __class__.__name__ --> gives name of the class
+class Test:
+    def method(self, x):
+        print(f'type of the x is : {x.__class__.__name__}');
+
+t = Test();
+t.method(10);
+t.method(10.3);
+t.method(False);
+t.method("name");
+t.method(10+20j);
+
+
+# Abstract classes and methods
+from abc import (abstractmethod, abstractclassmethod, abstractstaticmethod, ABC);
+class Vehicle(ABC):
+
+    @abstractmethod
+    def wheels(self):
+        pass;
+
+    @abstractstaticmethod
+    def color():
+        pass;
+
+    @abstractclassmethod
+    def gear_type(cls):
+        pass;
+
+class Bus(Vehicle):
+
+    def wheels(self):
+        return 6;
+
+    @staticmethod
+    def color():
+        return 'black';
+
+    @classmethod
+    def gear_type(cls):
+        return 'automatic';
+
+class Auto(Vehicle):
+    def wheels(self):
+        return 3;
+
+    @staticmethod
+    def color():
+        return 'Yellow';
+
+    @classmethod
+    def gear_type(cls):
+        return 'manual';
+
+
+auto = Auto();
+print(auto.wheels());
+print(auto.color());
+print(auto.gear_type());
+
+
+bus  = Bus();
+print(bus.wheels());
+print(bus.gear_type());
+print(bus.color());
+
+# vehicle = Vehicle(); TypeError: Can't instantiate abstract class Vehicle with abstract methods color, gear_type, wheels
+
+
