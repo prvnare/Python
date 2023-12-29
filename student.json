@@ -1,0 +1,102 @@
+[
+    {
+        "py/object": "__main__.Student",
+        "name": "Ram",
+        "age": 7,
+        "gender": "Male",
+        "grade": 5,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Raj",
+        "age": 9,
+        "gender": "Female",
+        "grade": 5,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Ram",
+        "age": 7,
+        "gender": "Male",
+        "grade": 6,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Cotton",
+        "age": 7,
+        "gender": "Male",
+        "grade": 6,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Raj",
+        "age": 8,
+        "gender": "Male",
+        "grade": 6,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Ram",
+        "age": 8,
+        "gender": "Female",
+        "grade": 9,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Cotton",
+        "age": 9,
+        "gender": "Male",
+        "grade": 6,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Cotton",
+        "age": 8,
+        "gender": "Male",
+        "grade": 5,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Cotton",
+        "age": 7,
+        "gender": "Female",
+        "grade": 6,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    },
+    {
+        "py/object": "__main__.Student",
+        "name": "Raj",
+        "age": 7,
+        "gender": "Female",
+        "grade": 5,
+        "isMarried": false,
+        "isMinor": true,
+        "haveGF": null
+    }
+]
